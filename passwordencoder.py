@@ -10,7 +10,7 @@ def encode(password):
     return encode_pass
 
 
-if __name__ == '__main__':
+def main():
 
     while True:
 
@@ -26,10 +26,13 @@ if __name__ == '__main__':
         if user_option == 1:
             user_password = input("Please enter your password to encode: ")
             pass_encoded = encode(user_password)
-
             print("Your password has been encoded and stored!")
             print()
         elif user_option == 2:
             pass
         elif user_option == 3:
             break
+
+
+if __name__ == '__main__':
+    main()
