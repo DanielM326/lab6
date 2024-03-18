@@ -10,6 +10,15 @@ def encode(password):
     return encode_pass
 
 
+def decode(enc_password):
+    var_decode_pass = ""
+
+    for i in enc_password:
+        var_decode_temp = int(i) - 3
+        var_decode_pass += str(var_decode_temp)[-1]
+
+    return var_decode_pass
+
 def main():
 
     while True:
@@ -29,7 +38,9 @@ def main():
             print("Your password has been encoded and stored!")
             print()
         elif user_option == 2:
-            pass
+            var_decoded_pass = decode(pass_encoded)
+            print(f"The encoded password is {pass_encoded}, and the original password is {var_decoded_pass}.")
+            print()
         elif user_option == 3:
             break
 
