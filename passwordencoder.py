@@ -11,13 +11,13 @@ def encode(password):
 
 
 def decode(enc_password):
-    var_decode_pass = ""
+    str_decode_pass = ""
 
     for i in enc_password:
         var_decode_temp = int(i) - 3
-        var_decode_pass += str(var_decode_temp)[-1]
+        str_decode_pass += str(var_decode_temp)[-1]
 
-    return var_decode_pass
+    return str_decode_pass
 
 def main():
 
