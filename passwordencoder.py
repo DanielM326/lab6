@@ -15,6 +15,10 @@ def decode(enc_password):
 
     for i in enc_password:
         var_decode_temp = int(i) - 3
+
+        if var_decode_temp < 0:
+            var_decode_temp += 10
+
         str_decode_pass += str(var_decode_temp)[-1]
 
     return str_decode_pass
